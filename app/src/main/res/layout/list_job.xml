@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <TextView
+        android:id="@+id/list_job_tvTitle1"
+        style="@style/TestTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Job Title: "
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/list_job_tvTitle"
+        style="@style/TestTextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/list_job_tvTitle1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/list_job_tvRecipe1"
+        style="@style/TestTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Recipe: "
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_job_tvTitle" />
+
+    <TextView
+        android:id="@+id/list_job_tvRecipe"
+        style="@style/TestTextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/list_job_tvRecipe1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_job_tvTitle" />
+
+    <TextView
+        android:id="@+id/list_job_tvStatus1"
+        style="@style/TestTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Status: "
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_job_tvRecipe" />
+
+    <TextView
+        android:id="@+id/list_job_tvStatus"
+        style="@style/TestTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/list_job_tvStatus1"
+        app:layout_constraintTop_toBottomOf="@+id/list_job_tvRecipe" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/list_job_status"
+        android:src="@drawable/ic_dot"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="@id/list_job_tvStatus"
+        app:layout_constraintTop_toTopOf="@id/list_job_tvStatus"
+        app:layout_constraintBottom_toBottomOf="@id/list_job_tvStatus"
+        app:tint="@android:color/white" />
+
+    <TextView
+        android:id="@+id/list_job_tvDesc1"
+        style="@style/TestTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Description: "
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_job_tvStatus" />
+
+    <TextView
+        android:id="@+id/list_job_tvDesc"
+        style="@style/TestTextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:singleLine="false"
+        app:layout_constraintLeft_toRightOf="@+id/list_job_tvDesc1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_job_tvStatus" />
+
+    <ImageView
+        android:id="@+id/list_job_ivAction"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/baseline_touch_app_24"
+        app:tint="@android:color/white" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

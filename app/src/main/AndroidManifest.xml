@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.glass.glassdesign">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+
+    <application
+        android:name="com.example.android.glass.glassdesign.GlassTest"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.android.glass.glassdesign.ThemeActivity"></activity>
+        <activity android:name="com.example.android.glass.glassdesign.WikiActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.DQActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.ResultActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.TestActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.ChartActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.JobActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.QualityActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.ScanActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.ScanResultActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.ScannerActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.VideoActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="com.google.android.glass.category.DIRECTORY" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.android.glass.glassdesign.TutorialActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.CameraActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.LyoManualActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.AgoraActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.WebCallActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.VideoCallActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.MonitorActivity" />
+        <activity android:name="com.example.android.glass.glassdesign.ManualActivity" />
+        <activity
+            android:name="com.example.android.glass.glassdesign.image.SimpleImageTrackingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="fullSensor" />
+        <!--
+      Changes Glass touchpad response from the following key strokes:
+        - Enter
+        - Tab
+        - Shift + Tab
+        - Back button
+        - Home button
+        - Arrows
+      to the motion events, enabling this app to use the touch gestures.
+        -->
+        <meta-data
+            android:name="com.google.android.glass.TouchEnabledApplication"
+            android:value="true" />
+
+        <activity android:name="com.example.android.glass.glassdesign.MainActivity" />
+        <activity
+            android:name="com.example.android.glass.glassdesign.menu.MenuActivity"
+            android:theme="@style/MenuTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
