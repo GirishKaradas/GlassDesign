@@ -45,6 +45,7 @@ public class MonitorActivity extends BaseActivity {
         adapter = new LoadAdapter(this, arrayList);
         recyclerView.setAdapter(adapter);
 
+
         reference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
