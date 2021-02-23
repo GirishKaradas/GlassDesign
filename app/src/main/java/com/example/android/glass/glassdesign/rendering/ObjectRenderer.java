@@ -27,7 +27,7 @@ import de.javagl.obj.ObjUtils;
  * Renders an object loaded from an OBJ file in OpenGL.
  */
 public class ObjectRenderer {
-    private static final String TAG = com.example.android.glass.glassdesign.rendering.ObjectRenderer.class.getSimpleName();
+    private static final String TAG = ObjectRenderer.class.getSimpleName();
 
     /**
      * Blend mode.

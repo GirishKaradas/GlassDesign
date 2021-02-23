@@ -26,7 +26,6 @@ import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
 
-import com.example.android.glass.glassdesign.image.SimpleImageTrackingActivity;
 import com.example.android.glass.glassdesign.menu.MenuActivity;
 import com.example.glass.ui.GlassGestureDetector.Gesture;
 
@@ -138,11 +137,14 @@ public class MainActivity extends BaseActivity {
                     selectedOption = "Quality Module";
                     startActivity(new Intent(this.getApplicationContext(), DQActivity.class));
                     break;
-                case R.id.bTracker:
+           /*     case R.id.bTracker:
                     selectedOption = "Live Tracking";
                     startActivity(new Intent(this.getApplicationContext(), SimpleImageTrackingActivity.class));
                     break;
 
+
+
+            */
                 case R.id.bTheme:
                     selectedOption = "Theme";
                     startActivity(new Intent(this.getApplicationContext(), ThemeActivity.class));

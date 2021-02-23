@@ -43,7 +43,7 @@ public class TestFragment extends BaseFragment{
             final TextView tv1 = view.findViewById(R.id.list_test_tv1);
             final TextView tv2 = view.findViewById(R.id.list_test_tv2);
             final TextView tv3 = view.findViewById(R.id.list_test_tv3);
-            final  TextView tv4 = view.findViewById(R.id.list_test_tv4);
+        //    final  TextView tv4 = view.findViewById(R.id.list_test_tv4);
             tvResponse = view.findViewById(R.id.list_test_tvResponse);
 
             tvQuestion.setText("Q. " +getArguments().getString("question"));
@@ -53,7 +53,7 @@ public class TestFragment extends BaseFragment{
             tv1.setText("A. " + list.get(0));
             tv2.setText("B. " + list.get(1));
             tv3.setText("C. " + list.get(2));
-            tv4.setText("D. " + list.get(3));
+         //   tv4.setText("D. " + list.get(3));
             tvResponse.setText(getArguments().getInt("response") + "Answer");
        /*     switch (getArguments().getInt("response")){
                 case 0:

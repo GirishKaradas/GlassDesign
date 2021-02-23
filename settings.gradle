@@ -14,7 +14,7 @@
  * limitations under the License.
  */
  
-include ':app', ':plugins', ':wikitude-native-sdk'
+include ':app'
 
 includeBuild('../GestureLibrarySample') {
     dependencySubstitution {

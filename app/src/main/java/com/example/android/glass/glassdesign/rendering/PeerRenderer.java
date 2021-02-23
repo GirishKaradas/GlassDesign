@@ -16,7 +16,7 @@ import io.agora.rtc.gl.GlUtil;
  * Created by wyylling@gmail.com on 03/01/2018.
  */
 public class PeerRenderer {
-    private static final String TAG = com.example.android.glass.glassdesign.rendering.PeerRenderer.class.getSimpleName();
+    private static final String TAG =   PeerRenderer.class.getSimpleName();
 
 
     private static final int COORDS_PER_VERTEX = 3;
@@ -72,12 +72,12 @@ public class PeerRenderer {
 
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, 0);
 
-        ShaderUtil.checkGLError(TAG, "Texture loading");
+          ShaderUtil.checkGLError(TAG, "Texture loading");
 
 
-        final int vertexShader = ShaderUtil.loadGLShader(TAG, context,
+        final int vertexShader =   ShaderUtil.loadGLShader(TAG, context,
                 GLES20.GL_VERTEX_SHADER, R.raw.peer_vertex);
-        final int fragmentShader = ShaderUtil.loadGLShader(TAG, context,
+        final int fragmentShader =   ShaderUtil.loadGLShader(TAG, context,
                 GLES20.GL_FRAGMENT_SHADER, R.raw.peer_fragment);
 
         mProgram = GLES20.glCreateProgram();
@@ -86,7 +86,7 @@ public class PeerRenderer {
         GLES20.glLinkProgram(mProgram);
         GLES20.glUseProgram(mProgram);
 
-        ShaderUtil.checkGLError(TAG, "Program creation");
+          ShaderUtil.checkGLError(TAG, "Program creation");
 
         mModelViewProjectionUniform = GLES20.glGetUniformLocation(mProgram, "u_ModelViewProjection");
         //mTextureLocation = GLES20.glGetUniformLocation(mProgram, "rgb_tex");
@@ -98,7 +98,7 @@ public class PeerRenderer {
         mPositionAttribute = GLES20.glGetAttribLocation(mProgram, "a_Position");
         mTexCoordAttribute = GLES20.glGetAttribLocation(mProgram, "a_TexCoord");
 
-        ShaderUtil.checkGLError(TAG, "Program parameters");
+          ShaderUtil.checkGLError(TAG, "Program parameters");
 
         Matrix.setIdentityM(mModelMatrix, 0);
     }
@@ -129,7 +129,7 @@ public class PeerRenderer {
      */
     public void draw(float[] cameraView, float[] cameraPerspective, Peer peer) {
 
-        ShaderUtil.checkGLError(TAG, "Before draw");
+          ShaderUtil.checkGLError(TAG, "Before draw");
 
         // Build the ModelView and ModelViewProjection matrices
         // for calculating object position and light.
@@ -149,7 +149,7 @@ public class PeerRenderer {
         GLES20.glTexImage2D(GLES20.GL_TEXTURE_2D, 0, GLES20.GL_RGBA, peer.width,
                 peer.height, 0, GLES20.GL_RGBA, GLES20.GL_UNSIGNED_BYTE, peer.data);
 
-        ShaderUtil.checkGLError(TAG, "upload remote peer data");
+          ShaderUtil.checkGLError(TAG, "upload remote peer data");
 
         GLES20.glVertexAttribPointer(
                 mPositionAttribute, 2, GLES20.GL_FLOAT, false, 0, FULL_RECTANGLE_BUF);
@@ -168,7 +168,7 @@ public class PeerRenderer {
 
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, 0);
 
-        ShaderUtil.checkGLError(TAG, "After draw");
+          ShaderUtil.checkGLError(TAG, "After draw");
     }
 
     private void drawRectangle(int x, int y, int width, int height) {

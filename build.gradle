@@ -5,9 +5,7 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven {
-            url 'https://cdn.wikitude.com/sdk/maven'
-        }
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.2'
@@ -18,13 +16,6 @@ buildscript {
     }
 }
 
-subprojects {
-    ext.commonCompileSdkVersion = 30
-    ext.commonMinSdkVersion = 22
-    ext.commonTargetSdkVersion = 30
-    ext.commonSupportLibVersion = "27.1.0"
-    ext.commonNdkVersion = "21.0.6113669"
-}
 
 
 allprojects {
@@ -33,9 +24,7 @@ allprojects {
         jcenter()
         maven { url 'https://jitpack.io' }
         maven { url 'https://tokbox.bintray.com/maven' }
-        maven {
-            url 'https://cdn.wikitude.com/sdk/maven'
-        }
+
 
     }
 }

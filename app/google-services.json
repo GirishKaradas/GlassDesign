@@ -8,6 +8,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:145302820149:android:0110465b32b4a0db8a287c",
+        "android_client_info": {
+          "package_name": "com.example.android.glass.glassdesign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145302820149-143ncjua7gbckc7gqg8a4dnt1t9omino.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHAyjAZKfEdHmxQtRYWuHQIuFEwPzslLc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145302820149-143ncjua7gbckc7gqg8a4dnt1t9omino.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:145302820149:android:fb0715377307b7b98a287c",
         "android_client_info": {
           "package_name": "com.example.android.glass.glasstest"

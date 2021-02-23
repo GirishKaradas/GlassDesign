@@ -34,7 +34,7 @@ import javax.microedition.khronos.opengles.GL10;
  * Renders the detected AR planes.
  */
 public class PlaneRenderer {
-    private static final String TAG = com.example.android.glass.glassdesign.rendering.PlaneRenderer.class.getSimpleName();
+    private static final String TAG = PlaneRenderer.class.getSimpleName();
 
     private static final int BYTES_PER_FLOAT = Float.SIZE / 8;
     private static final int BYTES_PER_SHORT = Short.SIZE / 8;
@@ -108,9 +108,9 @@ public class PlaneRenderer {
      */
     public void createOnGlThread(Context context, String gridDistanceTextureName) throws IOException {
         int vertexShader =
-                ShaderUtil.loadGLShader(TAG, context, GLES20.GL_VERTEX_SHADER, R.raw.plane_vertex);
+                 ShaderUtil.loadGLShader(TAG, context, GLES20.GL_VERTEX_SHADER, R.raw.plane_vertex);
         int passthroughShader =
-                ShaderUtil.loadGLShader(TAG, context, GLES20.GL_FRAGMENT_SHADER, R.raw.plane_fragment);
+                 ShaderUtil.loadGLShader(TAG, context, GLES20.GL_FRAGMENT_SHADER, R.raw.plane_fragment);
 
         planeProgram = GLES20.glCreateProgram();
         GLES20.glAttachShader(planeProgram, vertexShader);
@@ -118,7 +118,7 @@ public class PlaneRenderer {
         GLES20.glLinkProgram(planeProgram);
         GLES20.glUseProgram(planeProgram);
 
-        ShaderUtil.checkGLError(TAG, "Program creation");
+         ShaderUtil.checkGLError(TAG, "Program creation");
 
         // Read the texture.
         Bitmap textureBitmap =
@@ -135,7 +135,7 @@ public class PlaneRenderer {
         GLES20.glGenerateMipmap(GLES20.GL_TEXTURE_2D);
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, 0);
 
-        ShaderUtil.checkGLError(TAG, "Texture loading");
+         ShaderUtil.checkGLError(TAG, "Texture loading");
 
         planeXZPositionAlphaAttribute = GLES20.glGetAttribLocation(planeProgram, "a_XZPositionAlpha");
 
@@ -148,7 +148,7 @@ public class PlaneRenderer {
         gridControlUniform = GLES20.glGetUniformLocation(planeProgram, "u_gridControl");
         planeUvMatrixUniform = GLES20.glGetUniformLocation(planeProgram, "u_PlaneUvMatrix");
 
-        ShaderUtil.checkGLError(TAG, "Program parameters");
+         ShaderUtil.checkGLError(TAG, "Program parameters");
     }
 
     /**
@@ -263,7 +263,7 @@ public class PlaneRenderer {
         indexBuffer.rewind();
         GLES20.glDrawElements(
                 GLES20.GL_TRIANGLE_STRIP, indexBuffer.limit(), GLES20.GL_UNSIGNED_SHORT, indexBuffer);
-        ShaderUtil.checkGLError(TAG, "Drawing plane");
+         ShaderUtil.checkGLError(TAG, "Drawing plane");
     }
 
     static class SortablePlane {
@@ -353,7 +353,7 @@ public class PlaneRenderer {
         // Enable vertex arrays
         GLES20.glEnableVertexAttribArray(planeXZPositionAlphaAttribute);
 
-        ShaderUtil.checkGLError(TAG, "Setting up to draw planes");
+         ShaderUtil.checkGLError(TAG, "Setting up to draw planes");
 
         for (SortablePlane sortedPlane : sortedPlanes) {
             Plane plane = sortedPlane.plane;
@@ -396,7 +396,7 @@ public class PlaneRenderer {
         GLES20.glDisable(GLES20.GL_BLEND);
         GLES20.glDepthMask(true);
 
-        ShaderUtil.checkGLError(TAG, "Cleaning up after drawing planes");
+         ShaderUtil.checkGLError(TAG, "Cleaning up after drawing planes");
     }
 
     private static void colorRgbaToFloat(float[] planeColor, int colorRgba) {

@@ -188,10 +188,12 @@ public class TestActivity extends BaseActivity {
                     responses.set(indicator.getSelectedTabPosition(), 2);
                     response = 2;
                     break;
-                case R.id.bOptionD:
+            /*    case R.id.bOptionD:
                     responses.set(indicator.getSelectedTabPosition(), 3);
                     response = 3;
                     break;
+
+             */
             }
             indicator.getTabAt(indicator.getSelectedTabPosition()).setIcon(getResources().getDrawable(R.drawable.ic_accept_round));
             indicator.getTabAt(indicator.getSelectedTabPosition()).getIcon().setColorFilter(getResources().getColor(R.color.color_normal), PorterDuff.Mode.SRC_IN);

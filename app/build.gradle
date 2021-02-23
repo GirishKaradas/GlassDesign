@@ -23,7 +23,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.android.glass.glasstest"
+        applicationId "com.example.android.glass.glassdesign"
         minSdkVersion 27
         ndkVersion '21.1.6352462'
         targetSdkVersion 30
@@ -53,8 +53,6 @@ android {
 }
 
 dependencies {
-    implementation project(':wikitude-native-sdk')
-    implementation project(':plugins')
 
     implementation 'com.example.glass.ui:gesture-lib-sample:0.1.0-SNAPSHOT'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'

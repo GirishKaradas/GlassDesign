@@ -23,13 +23,13 @@ public class SplashActivity extends BaseActivity {
             @Override
             public void run() {
                 //Fixed activity is this
-               // Intent i = new Intent(SplashActivity.this, ScanActivity.class);
-               // startActivity(i);
+                Intent i = new Intent(SplashActivity.this, ScanActivity.class);
+                startActivity(i);
 
                 //For testing purpose only
-                Intent intent    = new Intent(SplashActivity.this, MainActivity.class);
-                intent.putExtra("menu_key", R.menu.menu_trainee);
-                startActivity(intent);
+             //   Intent intent    = new Intent(SplashActivity.this, MainActivity.class);
+             //   intent.putExtra("menu_key", R.menu.menu_trainee);
+              //  startActivity(intent);
 
 
 

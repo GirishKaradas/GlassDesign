@@ -21,7 +21,7 @@ import javax.microedition.khronos.opengles.GL10;
  * given to ARCore to be filled with the camera image.
  */
 public class BackgroundRenderer {
-    private static final String TAG = com.example.android.glass.glassdesign.rendering.BackgroundRenderer.class.getSimpleName();
+    private static final String TAG =     BackgroundRenderer.class.getSimpleName();
 
     private static final int COORDS_PER_VERTEX = 3;
     private static final int TEXCOORDS_PER_VERTEX = 2;
