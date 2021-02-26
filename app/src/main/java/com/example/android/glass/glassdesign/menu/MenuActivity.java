@@ -71,7 +71,7 @@ public class MenuActivity extends Base2Activity implements OnGestureListener {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.menu_layout);
     final RecyclerView recyclerView = findViewById(R.id.menuRecyclerView);
-    adapter = new MenuAdapter(menuItems);
+    adapter = new MenuAdapter(menuItems, this);
     final LayoutManager layoutManager = new LinearLayoutManager(this,
         LinearLayoutManager.HORIZONTAL, false);
     recyclerView.setLayoutManager(layoutManager);

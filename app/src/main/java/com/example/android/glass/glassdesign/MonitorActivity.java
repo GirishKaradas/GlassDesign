@@ -103,6 +103,28 @@ public class MonitorActivity extends BaseActivity {
         @Override
         public void onBindViewHolder(@NonNull LoadAdapter.ViewHolder holder, final int position) {
             holder.tvTitle.setText(list.get(position).getTitle());
+            switch (SplashActivity.color_code){
+
+                case 1:
+                    holder.tvTitle.setTextColor(getResources().getColor(R.color.design_green));
+                    break;
+                case 2:
+                    holder.tvTitle.setTextColor(getResources().getColor(R.color.design_red));
+                    break;
+                case 3:
+                    holder.tvTitle.setTextColor(getResources().getColor(R.color.design_yellow));
+                    break;
+                case 4:
+                    holder.tvTitle.setTextColor(getResources().getColor(R.color.design_blue));
+                    break;
+                case 5:
+                    holder.tvTitle.setTextColor(getResources().getColor(R.color.design_orange));
+                    break;
+                case 6:
+                    holder.tvTitle.setTextColor(getResources().getColor(R.color.design_purple));
+                    break;
+
+            }
 
 
         }

@@ -50,6 +50,7 @@ public class ManualActivity extends BaseActivity {
     public static Boolean FLAG8 = false;
     private TextView textView;
     private String manual_key;
+    public static int count_pages;
 
     private final CDAClient client=CDAClient
             .builder()
@@ -143,6 +144,7 @@ public class ManualActivity extends BaseActivity {
                                     return Double.valueOf(lyo.getId()).compareTo(Double.valueOf(lyo1.getId()));
                                 }
                             });
+                            count_pages = arrayList.size();
                             for (int i=0; i<arrayList.size(); i++){
                                 DataLyo dataLyo = arrayList.get(i);
                                 Log.e("This 2", dataLyo.getStep());

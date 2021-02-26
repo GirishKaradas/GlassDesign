@@ -13,7 +13,9 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
 import com.example.android.glass.glassdesign.BaseActivity;
+import com.example.android.glass.glassdesign.ManualActivity;
 import com.example.android.glass.glassdesign.R;
+import com.example.android.glass.glassdesign.SplashActivity;
 import com.squareup.picasso.Picasso;
 
 public class LyoLayoutFragment extends BaseFragment{
@@ -48,7 +50,7 @@ public class LyoLayoutFragment extends BaseFragment{
             final LinearLayout layout = view.findViewById(R.id.list_final_layout);
             final ImageView ivAction = view.findViewById(R.id.list_final_ivAction);
 
-            tvStep.setText(String.valueOf((int)getArguments().getDouble("id")));
+            tvStep.setText(String.valueOf((int)getArguments().getDouble("id")) + "/" + ManualActivity.count_pages);
             tvTitle.setText(getArguments().getString("title", ""));
             tvDesc.setText(getArguments().getString("desc", ""));
             if (!getArguments().getString("url").equals("")){
@@ -81,7 +83,7 @@ public class LyoLayoutFragment extends BaseFragment{
                     //      tvStep.setBackgroundColor(getResources().getColor(R.color.color_blue_light));
                     break;
             }
-            switch (BaseActivity.theme_code) {
+        /*    switch (BaseActivity.theme_code) {
                 case 1:
                     ivIcon.setColorFilter(ContextCompat.getColor(getActivity(), R.color.color_white), android.graphics.PorterDuff.Mode.MULTIPLY);
                     break;
@@ -91,6 +93,35 @@ public class LyoLayoutFragment extends BaseFragment{
 
                     break;
             }
+
+         */
+
+            switch (SplashActivity.color_code){
+
+                case 1:
+                    tvStep.setBackground(getResources().getDrawable(R.drawable.back_circle_green));
+                    break;
+
+                case 2:
+                    tvStep.setBackground(getResources().getDrawable(R.drawable.back_circle_red));
+                    break;
+
+                case 3:
+                    tvStep.setBackground(getResources().getDrawable(R.drawable.back_circle_yellow));
+                    break;
+                case 4:
+                    tvStep.setBackground(getResources().getDrawable(R.drawable.back_circle_blue));
+                    break;
+                case 5:
+                    tvStep.setBackground(getResources().getDrawable(R.drawable.back_circle_orange));
+                    break;
+                case 6:
+                    tvStep.setBackground(getResources().getDrawable(R.drawable.back_circle_purple));
+                    break;
+
+            }
+
+
 
         }
 

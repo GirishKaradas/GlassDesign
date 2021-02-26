@@ -16,15 +16,23 @@
 
 package com.example.android.glass.glassdesign.menu;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.android.glass.glassdesign.BaseActivity;
+import com.example.android.glass.glassdesign.R;
+import com.example.android.glass.glassdesign.SplashActivity;
 import com.example.android.glass.glassdesign.databinding.MenuItemBinding;
 import java.util.List;
+
 
 /**
  * Adapter for the menu horizontal recycler view.
@@ -32,9 +40,11 @@ import java.util.List;
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder> {
 
   private final List<GlassMenuItem> menuItems;
+  private final Context context;
 
-  MenuAdapter(List<GlassMenuItem> menuItems) {
+  MenuAdapter(List<GlassMenuItem> menuItems, Context context) {
     this.menuItems = menuItems;
+    this.context = context;
   }
 
   @NonNull
@@ -48,6 +58,44 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
   public void onBindViewHolder(@NonNull MenuViewHolder menuViewHolder, int position) {
     menuViewHolder.bind(menuItems.get(position));
     setFadeAnimation(menuViewHolder.itemView);
+    TextView textView = menuViewHolder.binding.textView;
+    ImageView imageView = menuViewHolder.binding.imageView;
+
+    switch (SplashActivity.color_code){
+
+      case 1:
+        textView.setTextColor(context.getResources().getColor(R.color.design_green));
+        imageView.setColorFilter(context.getResources().getColor(R.color.design_green));
+        break;
+
+      case 2:
+        textView.setTextColor(context.getResources().getColor(R.color.design_red));
+        imageView.setColorFilter(context.getResources().getColor(R.color.design_red));
+
+        break;
+
+      case 3:
+        textView.setTextColor(context.getResources().getColor(R.color.design_yellow));
+        imageView.setColorFilter(context.getResources().getColor(R.color.design_yellow));
+
+        break;
+      case 4:
+        textView.setTextColor(context.getResources().getColor(R.color.design_blue));
+        imageView.setColorFilter(context.getResources().getColor(R.color.design_blue));
+
+        break;
+      case 5:
+        textView.setTextColor(context.getResources().getColor(R.color.design_orange));
+        imageView.setColorFilter(context.getResources().getColor(R.color.design_orange));
+
+        break;
+      case 6:
+        textView.setTextColor(context.getResources().getColor(R.color.design_purple));
+        imageView.setColorFilter(context.getResources().getColor(R.color.design_purple));
+
+        break;
+
+    }
 
   }
 

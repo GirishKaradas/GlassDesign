@@ -43,7 +43,7 @@
             android:layout_marginRight="10dp"
             android:scaleType="fitXY"
             app:layout_constraintHorizontal_chainStyle="packed"
-            app:tint="@color/design_green" />
+             />
 
         <TextView
             android:id="@+id/textView"
@@ -53,7 +53,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:gravity="center"
-            android:textColor="@color/design_green"
             android:text="@{item.text}" />
 
     <!-- android:text="@{item.text}"

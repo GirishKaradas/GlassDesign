@@ -56,8 +56,10 @@
   <color name="color_black">#000000</color>
 
   <color name="design_green">#40D16B</color>
-  <color name="design_red">#FF7272</color>
-  <color name="design_yellow">#E3C61C</color>
-  <color name="design_blue">#77B1FF</color>
+  <color name="design_red">#E4311D</color>
+  <color name="design_yellow">#D4D95E</color>
+  <color name="design_blue">#40D1D1</color>
+  <color name="design_orange">#EF7F1A</color>
+  <color name="design_purple">#B85ED9</color>
 
 </resources>

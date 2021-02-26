@@ -9,6 +9,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,6 +44,7 @@ public class QualityActivity extends BaseActivity {
     private TextView tvTitle;
     private ArrayList<Integer> status = new ArrayList<Integer>();
     private String module_name;
+    private ImageView imageView;
 
     final ScreenSlidePagerAdapter screenSliderPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
 
@@ -61,10 +63,40 @@ public class QualityActivity extends BaseActivity {
         arrayList = new ArrayList<>();
         indicator.setupWithViewPager(viewPager, true);
         viewPager.setAdapter(screenSliderPagerAdapter);
+        imageView = findViewById(R.id.activity_quality_imageview);
 
         reference = FirebaseDatabase.getInstance().getReference().child("DQ").child(moduleKey);
         ref1 = FirebaseDatabase.getInstance().getReference().child("validator");
 
+        switch (SplashActivity.color_code){
+
+            case 1:
+                imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_green));
+                break;
+
+            case 2:
+                imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_red));
+
+                break;
+
+            case 3:
+                imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_yellow));
+
+                break;
+            case 4:
+                imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_blue));
+
+                break;
+            case 5:
+                imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_yellow));
+
+                break;
+            case 6:
+                imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_purple));
+
+                break;
+
+        }
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override

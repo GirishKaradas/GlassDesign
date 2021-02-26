@@ -30,6 +30,7 @@ import androidx.core.content.ContextCompat;
 
 import com.example.android.glass.glassdesign.BaseActivity;
 import com.example.android.glass.glassdesign.R;
+import com.example.android.glass.glassdesign.SplashActivity;
 
 /**
  * Fragment with the main card layout.
@@ -93,13 +94,48 @@ public class MainLayoutFragment extends BaseFragment {
 
 
       textView.setText(getArguments().getString(TEXT_KEY));
-      switch (BaseActivity.theme_code) {
+  /*    switch (BaseActivity.theme_code) {
         case 1:
           imageView.setColorFilter(ContextCompat.getColor(getActivity(), R.color.color_white), android.graphics.PorterDuff.Mode.MULTIPLY);
           break;
 
         case 2:
           imageView.setColorFilter(ContextCompat.getColor(getActivity(), R.color.color_black), android.graphics.PorterDuff.Mode.MULTIPLY);
+
+          break;
+      }
+
+   */
+      switch (SplashActivity.color_code){
+        case 1:
+          textView.setTextColor(getResources().getColor(R.color.design_green));
+          imageView.setColorFilter(getResources().getColor(R.color.design_green));
+          break;
+
+        case 2:
+          textView.setTextColor(getResources().getColor(R.color.design_red));
+          imageView.setColorFilter(getResources().getColor(R.color.design_red));
+
+          break;
+
+        case 3:
+          textView.setTextColor(getResources().getColor(R.color.design_yellow));
+          imageView.setColorFilter(getResources().getColor(R.color.design_yellow));
+
+          break;
+        case 4:
+          textView.setTextColor(getResources().getColor(R.color.design_blue));
+          imageView.setColorFilter(getResources().getColor(R.color.design_blue));
+
+          break;
+        case 5:
+          textView.setTextColor(getResources().getColor(R.color.design_orange));
+          imageView.setColorFilter(getResources().getColor(R.color.design_orange));
+
+          break;
+        case 6:
+          textView.setTextColor(getResources().getColor(R.color.design_purple));
+          imageView.setColorFilter(getResources().getColor(R.color.design_purple));
 
           break;
       }

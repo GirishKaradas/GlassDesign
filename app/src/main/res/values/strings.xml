@@ -106,7 +106,7 @@
 
     <string name="cma_token">CFPAT-vRfJufUStLrF8r17z76CRT3j8ydNADJQmNnFshCIuCw</string>
     <string name="live_tracking">Live Tracking</string>
-    <string name="change_theme">Change Theme</string>
+    <string name="change_theme">Change Theme Color</string>
 
 
 </resources>

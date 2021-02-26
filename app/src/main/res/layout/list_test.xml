@@ -9,7 +9,6 @@
         android:layout_height="80dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/custom_circle_back"
         android:src="@drawable/ic_help"
         android:id="@+id/list_test_imageview"
         android:padding="20dp"

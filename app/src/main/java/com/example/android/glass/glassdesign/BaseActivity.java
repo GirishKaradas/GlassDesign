@@ -40,6 +40,7 @@ public abstract class BaseActivity extends AppCompatActivity implements OnGestur
   private View decorView;
   private GlassGestureDetector glassGestureDetector;
   public static int theme_code;
+  public static int color_code;
 
   @Override
   protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -122,5 +123,4 @@ public abstract class BaseActivity extends AppCompatActivity implements OnGestur
       }
     }
   }
-
 }

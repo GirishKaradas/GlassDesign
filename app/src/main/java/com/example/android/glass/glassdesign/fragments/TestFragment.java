@@ -4,12 +4,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.android.glass.glassdesign.R;
+import com.example.android.glass.glassdesign.SplashActivity;
 
 import java.util.ArrayList;
 
@@ -45,6 +47,7 @@ public class TestFragment extends BaseFragment{
             final TextView tv3 = view.findViewById(R.id.list_test_tv3);
         //    final  TextView tv4 = view.findViewById(R.id.list_test_tv4);
             tvResponse = view.findViewById(R.id.list_test_tvResponse);
+            final ImageView imageView = view.findViewById(R.id.list_test_imageview);
 
             tvQuestion.setText("Q. " +getArguments().getString("question"));
 
@@ -78,6 +81,31 @@ public class TestFragment extends BaseFragment{
             }
 
         */
+
+            switch (SplashActivity.color_code){
+
+                case 1:
+                    imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_green));
+                    break;
+
+                case 2:
+                    imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_red));
+                    break;
+
+                case 3:
+                    imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_yellow));
+                    break;
+                case 4:
+                    imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_blue));
+                    break;
+                case 5:
+                    imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_orange));
+                    break;
+                case 6:
+                    imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_purple));
+                    break;
+
+            }
         }
         return view;
     }

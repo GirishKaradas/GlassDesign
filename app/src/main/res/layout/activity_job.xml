@@ -11,7 +11,7 @@
         android:layout_height="80dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/custom_circle_back"
+        android:background="@drawable/back_circle_green"
         android:src="@drawable/baseline_task_alt_24"
         android:id="@+id/activity_job_imageview"
         android:padding="20dp"

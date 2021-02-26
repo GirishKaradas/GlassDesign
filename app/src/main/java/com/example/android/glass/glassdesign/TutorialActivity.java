@@ -40,7 +40,42 @@ public class TutorialActivity extends Base2Activity {
         imageView = findViewById(R.id.activity_tutorial_imageview);
         textView.setText(arrayList.get(count));
         imageView.setImageResource(R.drawable.baseline_touch_app_24);
-        layout = findViewById(R.id.activity_tutorial_layout);
+        layout = findViewById(R.id.activity_tutorial_layout2);
+        switch (SplashActivity.color_code){
+
+            case 1:
+                layout.setBackgroundColor(getResources().getColor(R.color.design_green));
+                textView.setTextColor(getResources().getColor(R.color.design_green));
+                break;
+
+            case 2:
+                layout.setBackgroundColor(getResources().getColor(R.color.design_red));
+                textView.setTextColor(getResources().getColor(R.color.design_red));
+
+                break;
+
+            case 3:
+                layout.setBackgroundColor(getResources().getColor(R.color.design_yellow));
+                textView.setTextColor(getResources().getColor(R.color.design_yellow));
+
+                break;
+            case 4:
+                layout.setBackgroundColor(getResources().getColor(R.color.design_blue));
+                textView.setTextColor(getResources().getColor(R.color.design_blue));
+
+                break;
+            case 5:
+                layout.setBackgroundColor(getResources().getColor(R.color.design_orange));
+                textView.setTextColor(getResources().getColor(R.color.design_orange));
+
+                break;
+            case 6:
+                layout.setBackgroundColor(getResources().getColor(R.color.design_purple));
+                textView.setTextColor(getResources().getColor(R.color.design_purple));
+
+                break;
+
+        }
 
     }
 

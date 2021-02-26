@@ -1,11 +1,14 @@
 package com.example.android.glass.glassdesign;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Canvas;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -33,6 +36,7 @@ public class ScanActivity extends BaseActivity implements ZXingScannerView.Resul
 
 
 
+    @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     public void onCreate(Bundle state) {
         super.onCreate(state);
@@ -41,6 +45,7 @@ public class ScanActivity extends BaseActivity implements ZXingScannerView.Resul
             ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_ALL);
         }
         mScannerView = new ZXingScannerView(this);
+
         // Set the scanner view as the content view
         setContentView(mScannerView);
         dropDownAlert = new DropDownAlert(this);

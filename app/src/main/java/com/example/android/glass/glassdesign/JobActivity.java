@@ -10,6 +10,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.android.glass.glassdesign.data.DataJob;
@@ -36,6 +37,7 @@ public class JobActivity extends BaseActivity {
     private ArrayList<DataJob> arrayList = new ArrayList<>();
     private static int REQUEST_CODE = 789;
     private String MENU_KEY="menu_key";
+    private ImageView imageView;
 
     private List<BaseFragment> fragments = new ArrayList<>();
     final ScreenSlidePagerAdapter screenSlidePagerAdapter = new ScreenSlidePagerAdapter(
@@ -53,6 +55,30 @@ public class JobActivity extends BaseActivity {
         textView = findViewById(R.id.activity_job_tvCount);
         indicator = findViewById(R.id.activity_job_indicator);
         indicator.setupWithViewPager(viewPager, true);
+        imageView = findViewById(R.id.activity_job_imageview);
+
+        switch (SplashActivity.color_code){
+
+            case 1:
+                imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_green));
+                break;
+            case 2:
+                imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_red));
+                break;
+            case 3:
+                imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_yellow));
+                break;
+            case 4:
+                imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_blue));
+                break;
+            case 5:
+                imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_orange));
+                break;
+            case 6:
+                imageView.setBackground(getResources().getDrawable(R.drawable.back_circle_purple));
+                break;
+
+        }
 
         indicator.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

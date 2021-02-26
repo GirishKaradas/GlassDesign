@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.android.glass.glassdesign.R;
+import com.example.android.glass.glassdesign.SplashActivity;
 import com.google.android.flexbox.FlexboxLayout;
 
 import java.io.IOException;
@@ -44,6 +45,36 @@ public final class DropDownAlert {
         alertView = factory.inflate(R.layout.drop_down_alert, null);
         alertImagesLayout = alertView.findViewById(R.id.dropdown_alert_images);
         alertText = alertView.findViewById(R.id.dropdown_alert_text);
+
+        switch (SplashActivity.color_code){
+
+            case 1:
+                alertText.setTextColor(activity.getResources().getColor(R.color.design_green));
+                break;
+
+            case 2:
+                alertText.setTextColor(activity.getResources().getColor(R.color.design_red));
+
+                break;
+
+            case 3:
+                alertText.setTextColor(activity.getResources().getColor(R.color.design_yellow));
+
+                break;
+            case 4:
+                alertText.setTextColor(activity.getResources().getColor(R.color.design_blue));
+
+                break;
+            case 5:
+                alertText.setTextColor(activity.getResources().getColor(R.color.design_orange));
+
+                break;
+            case 6:
+                alertText.setTextColor(activity.getResources().getColor(R.color.design_purple));
+
+                break;
+
+        }
     }
 
     public void show() {
